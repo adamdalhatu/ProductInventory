@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Inventory - CSS Refresher</title>
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- External CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="app-container">
+    <header class="app-header">
+      <h1 class="title">Product Inventory</h1>
+      <p class="subtitle">Manage items, filter categories, and calculate totals.</p>
+    </header>
+
+    <!-- Add Item Form -->
+    <form id="addForm" class="add-form">
+      <div class="input-group">
+        <input type="text" id="itemName" placeholder="Item Name" required />
+        <input type="number" id="itemPrice" placeholder="Price ($)" min="1" required />
+        <select id="itemCategory" required>
+          <option value="Electronics">Electronics</option>
+          <option value="Stationery">Stationery</option>
+          <option value="Kitchen">Kitchen</option>
+          <option value="Home">Home</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+
+    <!-- Filter & Action Controls -->
+    <section class="toolbar">
+      <button id="showAllBtn" class="btn btn-secondary">Show All</button>
+      <button id="filterTechBtn" class="btn btn-secondary">Electronics Only</button>
+      <button id="calcTotalBtn" class="btn btn-accent">Calculate Total</button>
+    </section>
+
+    <!-- Product Card List -->
+    <ul id="productList" class="product-grid"></ul>
+
+    <!-- Calculated Total Output -->
+    <div id="summary" class="summary-card"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
